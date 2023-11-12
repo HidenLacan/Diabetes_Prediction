@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background-image: url("{% static 'diabetesui/images/bd2.jpg' %}");
+           
+        }
+    </style>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <div class="text-center center items-center ">
+        <h1 class="text-white text-6xl font-bold mb-8">Predict</h1>
+        <form action="result">
+          <table class="border-separate border-spacing-2 border border-white-500 bg-gray-100 rounded-md">
+            <tr >
+              <td align="right">Pregnancies:</td>
+              <td align="left">
+                <input type="text" name="n1" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Glucose:</td>
+              <td align="left">
+                <input type="text" name="n2" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Blood Pressure:</td>
+              <td align="left">
+                <input type="text" name="n3" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Skin Thickness:</td>
+              <td align="left">
+                <input type="text" name="n4" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Insulin:</td>
+              <td align="left">
+                <input type="text" name="n5" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">BMI:</td>
+              <td align="left">
+                <input type="text" name="n6" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Diabetes Pedigree function:</td>
+              <td align="left">
+                <input type="text" name="n7" />
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Age:</td>
+              <td align="left">
+                <input type="text" name="n8" />
+              </td>
+            </tr>
+          </table>
+          <input class='m-10 bg-transparent hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded 'type="submit" />
+        </form>
+        Result:{{result2}}
+      </div>
+    </div>
+  </body>
+</html>
