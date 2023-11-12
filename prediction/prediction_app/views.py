@@ -14,8 +14,8 @@ def predict(request):
 def result(request):
     ## csv_file_path = os.path.join(settings.BASE_DIR, 'prediction', 'diabetes.csv')
     csv_file_path = os.path.join(settings.BASE_DIR, 'diabetes.csv')
-
     data = pd.read_csv(csv_file_path)
+    
     x = data.drop('Outcome',axis=1)
     y  = data['Outcome']
 
